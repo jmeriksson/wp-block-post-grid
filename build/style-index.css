@@ -52,7 +52,12 @@
   }
 }
 .wp-block-jmeriksson-post-grid-block.has-background .grid {
-  padding: 2rem;
+  padding: 1rem;
+}
+@media (min-width: 782px) {
+  .wp-block-jmeriksson-post-grid-block.has-background .grid {
+    padding: 2rem;
+  }
 }
 
 /*# sourceMappingURL=style-index.css.map*/
