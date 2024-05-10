@@ -3181,7 +3181,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ ((module) => {
 
 "use strict";
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"jmeriksson/post-grid-block","version":"0.1.0","title":"Post Grid","category":"widgets","icon":"grid-view","description":"A block for displaying a grid of posts.","example":{},"supports":{"align":["wide"],"html":false,"color":{"text":true,"background":true}},"attributes":{"numberOfPosts":{"type":"number","default":4},"showPostImage":{"type":"boolean","default":true},"showPostAuthor":{"type":"boolean","default":true},"linkToAuthorPage":{"type":"boolean","default":true},"showPostDate":{"type":"boolean","default":true}},"textdomain":"post-grid-block","editorScript":"file:./index.js","style":"file:./style-index.css","render":"file:./render.php"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"jmeriksson/post-grid-block","version":"0.1.0","title":"Post Grid","category":"widgets","icon":"grid-view","description":"A block for displaying a grid of posts.","example":{},"supports":{"align":["wide"],"html":false,"color":{"text":true,"background":true},"spacing":{"padding":["top","bottom"]}},"attributes":{"numberOfPosts":{"type":"number","default":4},"showPostImage":{"type":"boolean","default":true},"showPostAuthor":{"type":"boolean","default":true},"linkToAuthorPage":{"type":"boolean","default":true},"showPostDate":{"type":"boolean","default":true}},"textdomain":"post-grid-block","editorScript":"file:./index.js","style":"file:./style-index.css","render":"file:./render.php"}');
 
 /***/ })
 
