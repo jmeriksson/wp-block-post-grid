@@ -56,7 +56,7 @@ export default function Edit({ attributes, setAttributes }) {
 					<NumberControl
 						label={ __( 'Number of posts to display', 'post-grid-block' ) }
 						value={ numberOfPosts }
-						onChange={ ( value ) => setAttributes( { numberOfPosts: value } ) }
+						onChange={ ( value ) => setAttributes( { numberOfPosts: parseInt(value) } ) }
 					/>
 					<ToggleControl
 						label={ __( 'Show post image', 'post-grid-block' ) }

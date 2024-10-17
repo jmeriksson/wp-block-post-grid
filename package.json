@@ -2,7 +2,7 @@
 	"name": "post-grid-block",
 	"version": "0.1.0",
 	"description": "A block for displaying a grid of posts.",
-	"author": "The WordPress Contributors",
+	"author": "Mikael Eriksson",
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
 	"scripts": {
