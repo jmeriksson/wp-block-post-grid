@@ -85,32 +85,30 @@ export default function Edit({ attributes, setAttributes }) {
 			<div { ...useBlockProps() }>
 				<div className="grid">
 					{posts && posts.map((post, index) => (
-						<div key={post.id} className="grid-item">
+						<article key={post.id} className="grid-item">
 							{showPostImage && media && media[index] ? (
-								<figure>
+								<figure className="grid-item__figure">
 									<img src={media[index].source_url} alt={media[index].alt_text} />
 								</figure>
 							): null}
-							<div>
-								<h3>{parse(post.title.rendered)}</h3>
-								{showPostAuthor || showPostDate ? (
-									<div className="post-meta">
-										{showPostAuthor && authors && authors[index] ? (
-											<small>{__('By', 'post-grid-block')} {linkToAuthorPage ? (
-												<a href={authors[index][0].link}>{authors[index][0].name}</a>
-											) : (
-												<span>{authors[index][0].name}</span>
-											)}</small>
-										): null}
-										{showPostDate ? (
-											<small>{new Date(post.date).getFullYear()}-{String(new Date(post.date).getMonth() + 1).padStart(2, '0')}-{String(new Date(post.date).getDate()).padStart(2, '0')}</small>
-										): null}
-									</div>
-								): null}
-								<div dangerouslySetInnerHTML={{__html: post.excerpt.rendered}} />
-								<a href={post.link}>{__('Read more', 'post-grid-block')}</a>
-							</div>
-						</div>
+							<h3 className="grid-item__heading">{parse(post.title.rendered)}</h3>
+							{showPostAuthor || showPostDate ? (
+								<div className="grid-item__post-meta">
+									{showPostAuthor && authors && authors[index] ? (
+										<small>{__('By', 'post-grid-block')} {linkToAuthorPage ? (
+											<a href={authors[index][0].link}>{authors[index][0].name}</a>
+										) : (
+											<span>{authors[index][0].name}</span>
+										)}</small>
+									): null}
+									{showPostDate ? (
+										<small>{new Date(post.date).getFullYear()}-{String(new Date(post.date).getMonth() + 1).padStart(2, '0')}-{String(new Date(post.date).getDate()).padStart(2, '0')}</small>
+									): null}
+								</div>
+							): null}
+							<div dangerouslySetInnerHTML={{__html: post.excerpt.rendered}} />
+							<a href={post.link}>{__('Read more', 'post-grid-block')}</a>
+						</article>
 					))}
 				</div>
 			</div>
